@@ -15,8 +15,8 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  width: 370px;
-  height: 250px;
+  max-width: 370px;
+  height: min-content;
   margin:0 auto 20px auto;
   margin-top: 30px;
 }

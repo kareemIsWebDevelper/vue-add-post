@@ -10,21 +10,14 @@
     <button @click="createPost" >Publish</button>
   </div>
 
-  <div style="margin-top: 60px;">
-    <div class="p-3 d-flex justify-content-around bg-white">
-      <div style="display:flex; gap: 20px;">
-      <RouterLink to="/">Home</RouterLink>/
-      <RouterLink to="/about">New Post ?</RouterLink>
-    </div>
-    <p>
-      (c) Copyrights 2023 - kareem khaled
-    </p>
+  <div>
+    <Footer />
   </div>
-</div>
 </template>
 
 <script setup>
 import { usePostStore } from '../stores/counter';
+import Footer from '../components/Footer.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 const PostStore = usePostStore();
@@ -36,7 +29,7 @@ PostStore.myPosts.push({
   title: title.value,
   content: content.value
 });
-router.push("/");
+router.push("/home");
 };
 </script> 
 <style scoped>
@@ -45,7 +38,7 @@ router.push("/");
   }
   .card {
     width: 350px;
-    margin: 100px auto auto auto;
+    margin: 50px auto auto auto;
   }
   textarea {
     height: 150px;
@@ -56,5 +49,8 @@ router.push("/");
     color: white;
     padding: 10px;
     border-radius: 10px;
+  }
+  button:hover {
+   opacity: .5;
   }
 </style>
