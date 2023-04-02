@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.dropdown {
+  position: relative;
+}
+.link {
+  background-color: darkblue;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 5px 20px 5px 20px;
+}
+
+.mylink {
+  font-size: 20px;
+  color: blue;
+  text-decoration: none;
+  display: block;
+  width: 200px;
+}
+.mylink:hover {
+ background-color: lightblue;
+}
+
+img {
+  cursor: pointer;
+}
